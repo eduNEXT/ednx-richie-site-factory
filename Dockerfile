@@ -129,7 +129,7 @@ ARG STATIC_ROOT
 ENV SITE=${SITE}
 
 # Copy collected symlinks to static files
-COPY --from=collector ${STATIC_ROOT}/staticfiles.json ${STATIC_ROOT}/
+COPY --from=collector ${STATIC_ROOT} ${STATIC_ROOT}
 
 # Un-privileged user running the application
 USER ${DOCKER_USER}

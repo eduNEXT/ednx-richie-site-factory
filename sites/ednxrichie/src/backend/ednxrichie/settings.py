@@ -195,7 +195,7 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
     # For static files, we want to use a backend that includes a hash in
     # the filename, that is calculated from the file content, so that browsers always
     # get the updated version of each file.
-    STATICFILES_STORAGE = values.Value("base.storage.CDNManifestStaticFilesStorage")
+    STATICFILES_STORAGE = values.Value("whitenoise.storage.CompressedManifestStaticFilesStorage")
 
     AUTHENTICATION_BACKENDS = ("django.contrib.auth.backends.ModelBackend",)
 
@@ -364,8 +364,8 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
 
     MIDDLEWARE = (
         "richie.apps.core.cache.LimitBrowserCacheTTLHeaders",
-        "cms.middleware.utils.ApphookReloadMiddleware",
         "django.middleware.security.SecurityMiddleware",
+        "whitenoise.middleware.WhiteNoiseMiddleware",
         "django.contrib.sessions.middleware.SessionMiddleware",
         "django.middleware.csrf.CsrfViewMiddleware",
         "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -735,18 +735,23 @@ class Production(Base):
     SECURE_CONTENT_TYPE_NOSNIFF = True
     SESSION_COOKIE_SECURE = True
 
-    DEFAULT_FILE_STORAGE = "base.storage.MediaStorage"
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     AWS_DEFAULT_ACL = None
     AWS_LOCATION = "media"
 
     AWS_ACCESS_KEY_ID = values.SecretValue()
     AWS_SECRET_ACCESS_KEY = values.SecretValue()
+    RICHIE_COURSE_RUN_SYNC_SECRETS = values.ListValue(["ThisIsAnExampleKey"])
 
     AWS_S3_OBJECT_PARAMETERS = {
         "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
         "CacheControl": "max-age=94608000",
     }
 
+    AWS_S3_SIGNATURE_VERSION = values.Value("s3v4")
+    AWS_S3_ENDPOINT_URL = values.Value("https://files.unesco-stage.atlas.edunext.link")
+    AWS_LOCATION = values.Value("richieuploads")
+    AWS_STORAGE_BUCKET_NAME = values.Value("openedx")
     AWS_S3_REGION_NAME = values.Value("eu-west-1")
 
     AWS_MEDIA_BUCKET_NAME = values.Value("production-richie-media")

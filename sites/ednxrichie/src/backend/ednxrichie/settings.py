@@ -758,8 +758,6 @@ class Production(Base):
     # CDN domain for static/media urls. It is passed to the frontend to load built chunks
     CDN_DOMAIN = values.Value()
 
-    TEXT_CKEDITOR_BASE_PATH = values.Value()
-
 
 class Feature(Production):
     """

@@ -758,8 +758,7 @@ class Production(Base):
     # CDN domain for static/media urls. It is passed to the frontend to load built chunks
     CDN_DOMAIN = values.Value()
 
-    # Richie factory had a dynamic value with CDN, but it failed in unesco stage
-    TEXT_CKEDITOR_BASE_PATH = "/static/djangocms_text_ckeditor/ckeditor/"
+    TEXT_CKEDITOR_BASE_PATH = values.Value()
 
 
 class Feature(Production):

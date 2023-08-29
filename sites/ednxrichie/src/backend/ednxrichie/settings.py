@@ -737,7 +737,6 @@ class Production(Base):
 
     DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
     AWS_DEFAULT_ACL = None
-    AWS_LOCATION = "media"
 
     AWS_ACCESS_KEY_ID = values.SecretValue()
     AWS_SECRET_ACCESS_KEY = values.SecretValue()
@@ -759,10 +758,8 @@ class Production(Base):
     # CDN domain for static/media urls. It is passed to the frontend to load built chunks
     CDN_DOMAIN = values.Value()
 
-    @property
-    def TEXT_CKEDITOR_BASE_PATH(self):
-        """Configure CKEditor with an absolute url as base path to point to CloudFront."""
-        return "//{!s}/static/djangocms_text_ckeditor/ckeditor/".format(self.CDN_DOMAIN)
+    # Richie factory had a dynamic value with CDN, but it failed in unesco stage
+    TEXT_CKEDITOR_BASE_PATH = "/static/djangocms_text_ckeditor/ckeditor/"
 
 
 class Feature(Production):

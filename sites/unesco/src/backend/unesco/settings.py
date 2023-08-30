@@ -636,6 +636,10 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         "body > svg, #main-menu, .body-footer, .body-mentions"
     )
 
+    # This setting is used so that the background images are not compiled with a signature
+    AWS_QUERYSTRING_AUTH = False
+    AWS_S3_CUSTOM_DOMAIN = values.Value("files.unesco-stage.atlas.edunext.link/openedx")
+
     # pylint: disable=invalid-name
     @property
     def ENVIRONMENT(self):
@@ -752,6 +756,7 @@ class Production(Base):
     AWS_LOCATION = values.Value("richieuploads")
     AWS_STORAGE_BUCKET_NAME = values.Value("openedx")
     AWS_S3_REGION_NAME = values.Value("eu-west-1")
+    AWS_S3_CUSTOM_DOMAIN = values.Value("files.unesco-stage.atlas.edunext.link/openedx")
     AWS_QUERYSTRING_AUTH = False
     AWS_MEDIA_BUCKET_NAME = values.Value("production-richie-media")
 

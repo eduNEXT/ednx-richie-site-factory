@@ -491,7 +491,7 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
     # Logging
     LOGGING = {
         "version": 1,
-        "disable_existing_loggers": True,
+        "disable_existing_loggers": False,
         "formatters": {
             "verbose": {
                 "format": "%(levelname)s %(asctime)s %(module)s "
@@ -511,6 +511,10 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
                 "handlers": ["console"],
                 "propagate": False,
             }
+        },
+        "root": {
+            "handlers": ["console"],
+            "level": "DEBUG",
         },
     }
 

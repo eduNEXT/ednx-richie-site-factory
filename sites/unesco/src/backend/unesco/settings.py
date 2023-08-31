@@ -730,31 +730,31 @@ class Production(Base):
 
     # Security
     SECRET_KEY = values.SecretValue()
-    CSRF_COOKIE_SECURE = values.BooleanValue(True)
-    SECURE_BROWSER_XSS_FILTER = values.BooleanValue(True)
-    SECURE_CONTENT_TYPE_NOSNIFF = values.BooleanValue(True)
-    SESSION_COOKIE_SECURE = values.BooleanValue(True)
+    CSRF_COOKIE_SECURE = True
+    SECURE_BROWSER_XSS_FILTER = True
+    SECURE_CONTENT_TYPE_NOSNIFF = True
+    SESSION_COOKIE_SECURE = True
 
-    DEFAULT_FILE_STORAGE = values.Value("storages.backends.s3boto3.S3Boto3Storage")
-    AWS_DEFAULT_ACL = values.Value(None)
+    DEFAULT_FILE_STORAGE = "storages.backends.s3boto3.S3Boto3Storage"
+    AWS_DEFAULT_ACL = None
 
     AWS_ACCESS_KEY_ID = values.SecretValue()
     AWS_SECRET_ACCESS_KEY = values.SecretValue()
     RICHIE_COURSE_RUN_SYNC_SECRETS = values.ListValue(["ThisIsAnExampleKey"])
 
-    AWS_S3_OBJECT_PARAMETERS = values.DictValue({
+    AWS_S3_OBJECT_PARAMETERS = {
         "Expires": "Thu, 31 Dec 2099 20:00:00 GMT",
         "CacheControl": "max-age=94608000",
-    })
+    }
 
-    AWS_S3_SIGNATURE_VERSION = values.Value()
-    AWS_S3_ENDPOINT_URL = values.Value()
-    AWS_LOCATION = values.Value()
-    AWS_STORAGE_BUCKET_NAME = values.Value()
-    AWS_S3_REGION_NAME = values.Value()
-    AWS_S3_CUSTOM_DOMAIN = values.Value()
-    AWS_QUERYSTRING_AUTH = values.BooleanValue(False)
-    AWS_MEDIA_BUCKET_NAME = values.Value()
+    AWS_S3_SIGNATURE_VERSION = values.Value("s3v4")
+    AWS_S3_ENDPOINT_URL = values.Value("https://files.unesco-stage.atlas.edunext.link")
+    AWS_LOCATION = values.Value("richieuploads")
+    AWS_STORAGE_BUCKET_NAME = values.Value("openedx-stage")
+    AWS_S3_REGION_NAME = values.Value("eu-west-1")
+    AWS_S3_CUSTOM_DOMAIN = values.Value("files.unesco-stage.atlas.edunext.link/openedx-stage")
+    AWS_QUERYSTRING_AUTH = False
+    AWS_MEDIA_BUCKET_NAME = values.Value("production-richie-media")
 
     # CDN domain for static/media urls. It is passed to the frontend to load built chunks
     CDN_DOMAIN = values.Value()

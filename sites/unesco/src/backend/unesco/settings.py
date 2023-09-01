@@ -4,6 +4,7 @@ Django settings for the richie unesco project.
 import json
 import os
 
+from django.conf import global_settings
 from django.utils.translation import gettext_lazy as _
 
 # pylint: disable=ungrouped-imports
@@ -442,7 +443,13 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
     # fallback/default languages throughout the app.
     # Use "en" as default as it is the language that is most likely to be spoken by any visitor
     # when their preferred language, whatever it is, is unavailable
-    LANGUAGES = (("en", _("English")), ("fr", _("French")))
+    LANGUAGES = (
+        ("en", _("English")),
+        ("fr", _("French")),
+        ("pt", _("Portuguese")),
+        ("es", _("Spanish")),
+        ("ar", _("Arabic")),
+    )
 
     # - Django CMS
     CMS_LANGUAGES = {
@@ -450,7 +457,7 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
             "public": True,
             "hide_untranslated": False,
             "redirect_on_fallback": True,
-            "fallbacks": ["en", "fr"],
+            "fallbacks": ["en", "fr", "pt", "es", "ar"],
         },
         1: [
             {
@@ -466,6 +473,30 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
                 "code": "fr",
                 "hide_untranslated": False,
                 "name": _("French"),
+                "fallbacks": ["en"],
+                "redirect_on_fallback": False,
+            },
+            {
+                "public": True,
+                "code": "pt",
+                "hide_untranslated": False,
+                "name": _("Portuguese (Portugal)"),
+                "fallbacks": ["en"],
+                "redirect_on_fallback": False,
+            },
+            {
+                "public": True,
+                "code": "es",
+                "hide_untranslated": False,
+                "name": _("Spanish (Spain)"),
+                "fallbacks": ["en"],
+                "redirect_on_fallback": False,
+            },
+            {
+                "public": True,
+                "code": "ar",
+                "hide_untranslated": False,
+                "name": _("Arabic (Saudi Arabia)"),
                 "fallbacks": ["en"],
                 "redirect_on_fallback": False,
             },
@@ -663,6 +694,15 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         Set cache prefix specific to release so existing cache is invalidated for new deployments.
         """
         return f"cms_{get_release():s}_"
+    @property
+    def ALL_LANGUAGES(self):
+        """Add extra languages for course runs"""
+        return [(language, _(name)) for language, name in global_settings.LANGUAGES] + [
+            ("pt", _("Portuguese")),
+            ("fr", _("French")),
+            ("es", _("Spanish")),
+            ("ar", _("Arabic"))
+        ]
 
     @classmethod
     def post_setup(cls):

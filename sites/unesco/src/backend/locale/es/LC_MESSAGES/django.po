@@ -3,6 +3,7 @@
 # This file is distributed under the same license as the PACKAGE package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -15,67 +16,66 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #: templates/social-networks/blogpost-badges.html:3
 #, python-format
 msgid "FUN news: %(title)s"
-msgstr "Actualité FUN: %(title)s"
+msgstr ""
 
 #: templates/social-networks/blogpost-badges.html:4
 #, python-format
 msgid "FUN news: %(title)s %(url)s"
-msgstr "Actualité FUN: %(title)s %(url)s"
+msgstr ""
 
 #: templates/social-networks/blogpost-badges.html:10
 #: templates/social-networks/course-badges.html:10
 msgid "Share on Facebook"
-msgstr "Partager sur Facebook"
+msgstr ""
 
 #: templates/social-networks/blogpost-badges.html:20
 #: templates/social-networks/course-badges.html:20
 msgid "Share on Twitter"
-msgstr "Partager sur Twitter"
+msgstr ""
 
 #: templates/social-networks/blogpost-badges.html:30
 #: templates/social-networks/course-badges.html:30
 msgid "Share on Linkedin"
-msgstr "Partager sur Linkedin"
+msgstr ""
 
 #: templates/social-networks/blogpost-badges.html:40
 #: templates/social-networks/course-badges.html:40
 msgid "Share by Email"
-msgstr "Partager par Email"
+msgstr ""
 
 #: templates/social-networks/course-badges.html:3
 msgid "Follow a course online with FUN"
-msgstr "Suivre un cours en ligne avec FUN"
+msgstr ""
 
 #: templates/social-networks/course-badges.html:4
 #, python-format
 msgid "I just enrolled to the course \"%(title)s\" on FUN: %(url)s"
-msgstr "Je viens de m'inscrire au cours \"%(title)s\" sur FUN: %(url)s"
+msgstr ""
 
 #: templates/social-networks/footer-badges.html:8
 msgid "Facebook"
-msgstr "Facebook"
+msgstr ""
 
 #: templates/social-networks/footer-badges.html:16
 msgid "Twitter page"
-msgstr "Page Twitter"
+msgstr ""
 
 #: templates/social-networks/footer-badges.html:19
 msgid "Twitter"
-msgstr "Twitter"
+msgstr ""
 
 #: templates/social-networks/footer-badges.html:27
 #: templates/social-networks/footer-badges.html:30
 msgid "Linkedin"
-msgstr "Linkedin"
+msgstr ""
 
 #: unesco/settings.py:221
 msgid "Dashboard"
-msgstr "Tableau de bord"
+msgstr ""
 
 #: unesco/settings.py:222
 msgid "{base_url:s}/dashboard"
@@ -83,7 +83,7 @@ msgstr ""
 
 #: unesco/settings.py:225
 msgid "Profile"
-msgstr "Profil"
+msgstr ""
 
 #: unesco/settings.py:226
 msgid "{base_url:s}/u/(username)"
@@ -91,7 +91,7 @@ msgstr ""
 
 #: unesco/settings.py:229
 msgid "Account"
-msgstr "Compte"
+msgstr ""
 
 #: unesco/settings.py:230
 msgid "{base_url:s}/account/settings"
@@ -99,15 +99,15 @@ msgstr ""
 
 #: unesco/settings.py:357
 msgid "Teaser"
-msgstr "Accroche"
+msgstr ""
 
 #: unesco/settings.py:447 unesco/settings.py:467
 msgid "English"
-msgstr "Anglais"
+msgstr ""
 
 #: unesco/settings.py:448 unesco/settings.py:475
 msgid "French"
-msgstr "Français"
+msgstr ""
 
 #: unesco/settings.py:449 unesco/settings.py:483
 msgid "Portuguese (Portugal)"
@@ -128,54 +128,3 @@ msgstr ""
 #: unesco/settings.py:702
 msgid "French (Canada)"
 msgstr ""
-
-msgid "Availability"
-msgstr "Disponibilité"
-
-msgid "Languages"
-msgstr "Langues"
-
-msgid "New courses"
-msgstr "Nouveaux cours"
-
-msgid "Subjects"
-msgstr "Thématiques"
-
-msgid "Collections"
-msgstr "Collections"
-
-msgid "Organizations"
-msgstr "Établissements"
-
-msgid "Contributors"
-msgstr "Contributeurs"
-
-msgid "Licences"
-msgstr "Licences"
-
-msgid "Weekly pace"
-msgstr "Rythme hebdomadaire"
-
-msgid "Self-paced"
-msgstr "À son rythme"
-
-msgid "Less than one hour"
-msgstr "Moins d'une heure"
-
-msgid "One to two hours"
-msgstr "Une à deux heures"
-
-msgid "More than two hours"
-msgstr "Plus de deux heures"
-
-msgid "Pashto"
-msgstr "Pachtoun"
-
-msgid "Unsorted uploads are not allowed."
-msgstr "Les téléchargements non classés sont interdits"
-
-msgid "FAQ"
-msgstr "FAQ"
-
-msgid "https://www.france-universite-numerique.fr/en/"
-msgstr "https://www.france-universite-numerique.fr/fr/"

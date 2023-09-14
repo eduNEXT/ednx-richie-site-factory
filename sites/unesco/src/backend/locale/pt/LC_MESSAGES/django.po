@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-02 00:40+0200\n"
+"POT-Creation-Date: 2023-09-14 22:31+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -105,26 +105,30 @@ msgstr ""
 msgid "English"
 msgstr ""
 
-#: unesco/settings.py:448 unesco/settings.py:475
+#: unesco/settings.py:448 unesco/settings.py:475 unesco/settings.py:702
 msgid "French"
 msgstr ""
 
-#: unesco/settings.py:449 unesco/settings.py:483
-msgid "Portuguese (Portugal)"
-msgstr ""
-
-#: unesco/settings.py:450 unesco/settings.py:491 unesco/settings.py:703
-msgid "Spanish (Spain)"
-msgstr ""
-
-#: unesco/settings.py:451 unesco/settings.py:499 unesco/settings.py:704
-msgid "Arabic (Saudi Arabia)"
-msgstr ""
-
-#: unesco/settings.py:701
+#: unesco/settings.py:449 unesco/settings.py:701
 msgid "Portuguese"
 msgstr ""
 
-#: unesco/settings.py:702
-msgid "French (Canada)"
+#: unesco/settings.py:450 unesco/settings.py:703
+msgid "Spanish"
+msgstr ""
+
+#: unesco/settings.py:451 unesco/settings.py:704
+msgid "Arabic"
+msgstr ""
+
+#: unesco/settings.py:483
+msgid "Portuguese (Portugal)"
+msgstr ""
+
+#: unesco/settings.py:491
+msgid "Spanish (Spain)"
+msgstr ""
+
+#: unesco/settings.py:499
+msgid "Arabic (Saudi Arabia)"
 msgstr ""

@@ -451,6 +451,8 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
         ("ar", _("Arabic")),
     )
 
+    RFC_5646_LOCALES = ["en-US", "es-ES", "pt-PT", "fr-FR", "ar-SA"]
+
     # - Django CMS
     CMS_LANGUAGES = {
         "default": {

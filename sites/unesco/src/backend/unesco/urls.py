@@ -18,6 +18,8 @@ from richie.apps.courses.urls import urlpatterns as courses_urlpatterns
 from richie.apps.search.urls import urlpatterns as search_urlpatterns
 from richie.plugins.urls import urlpatterns as plugins_urlpatterns
 
+from .courses_api.urls import urlpatterns as courses_api_urlpatterns
+
 # For now, we use URLPathVersioning to be consistent with fonzie. Fonzie uses it
 # because DRF OpenAPI only supports URLPathVersioning for now. See fonzie
 # API_PREFIX config for more information.
@@ -30,7 +32,7 @@ urlpatterns = [
     path(r"sitemap.xml", sitemap, {"sitemaps": {"cmspages": CMSSitemap}}),
     re_path(
         r"api/{}/".format(API_PREFIX),
-        include([*courses_urlpatterns, *search_urlpatterns, *plugins_urlpatterns]),
+        include([*courses_urlpatterns, *search_urlpatterns, *plugins_urlpatterns, *courses_api_urlpatterns]),
     ),
     re_path(r"^redirects/", include([*courses_redirects_urlpatterns])),
     path(r"", include("filer.server.urls")),

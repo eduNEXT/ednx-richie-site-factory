@@ -1,0 +1,27 @@
+///
+/// Color palette and schemes
+///
+
+// Named colors
+// ---------
+$palette: recursive-map-merge(
+  $palette,
+  (
+    'black': #000000,
+    'dark-grey': #007bff,
+    'charcoal': #29303b,
+    'slate-grey': #686868,
+    'battleship-grey': #686f7a,
+    'light-grey': #d2d2d2,
+    'silver': #d5dbe0,
+    'azure2': #eceff1,
+    'smoke': #fdfdfd,
+    'white': #ffffff,
+    'denim': #0067b7,
+    'steelblue3': #3e8dc9,
+    'blue-green': #0052aa,
+    'greeny-blue': #59a7fa,
+    'mediumturquoise': #59a9ff,
+    'firebrick6': #f72c30,
+  )
+);

@@ -1,7 +1,0 @@
-{
-    "components.CourseGlimpse.organizationCountLabel": {
-        "description": "Organization title for multiple organizations",
-        "message": "Produit par {organizationCount, number} partenaires"
-    }
-}
-  

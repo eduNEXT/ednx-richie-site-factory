@@ -1,6 +1,6 @@
 # Richie site factory
 
-This repository is a workbench for France Université Numérique to develop
+This repository is a workbench for eduNext to develop
 themed sites based on [Richie](https://github.com/openfun/richie), the CMS
 for Open Education.
 
@@ -25,13 +25,14 @@ a script that will list existing sites and let you choose one:
 ```bash
 $ bin/activate
 Select an available site to activate:
-[1] demo (default)
-[2] funmooc
-Your choice: 2
+[1] unesco (default)
+[2] demo
+[3] ednxrichie
+Your choice: 1
 
 # Check your environment with:
 $ make info
-RICHIE_SITE: funmooc
+RICHIE_SITE: unesco
 ```
 
 Once your environment is set, start the full project by running:
@@ -141,13 +142,13 @@ is automated.
 For example, to upgrade a specific site, test its build after upgrade and commit all changes:
 
 ```
-bin/upgrade ademe --build --commit
+bin/upgrade ednxrichie --build --commit
 ```
 
 To upgrade a list of 3 sites but without testing the build or committing the changes:
 
 ```
-bin/upgrade ademe funcampus funcorporate
+bin/upgrade ednxrichie funcampus funcorporate
 ```
 
 To upgrade all the sites handled in the site factory:
@@ -165,7 +166,7 @@ if only fixes are present in the changelog, otherwise a minor release is made.
 For example, to release a specific site and commit all changes:
 
 ```
-bin/release ademe --commit
+bin/release ednxrichie --commit
 ```
 
 If you consider that the changelog contains breaking changes, you can force a major release
@@ -175,7 +176,7 @@ by passing the parameter `--major`.
 To release a list of 3 sites but without committing the changes:
 
 ```
-bin/release ademe funcampus funcorporate --major
+bin/release ednxrichie funcampus funcorporate --major
 ```
 
 To release all the sites handled in the site factory:

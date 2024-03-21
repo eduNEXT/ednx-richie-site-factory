@@ -1,7 +1,25 @@
 {% load i18n static %}{% spaceless %}
 {% with full_page_url=SITE.web_url|add:page_url %}
-    {% blocktrans asvar shared_subject %}Follow a course online with FUN{% endblocktrans %}
-    {% blocktrans with title=page_title|safe url=full_page_url asvar shared_sentence %}I just enrolled to the course "{{ title }}" on FUN: {{ url }}{% endblocktrans %}
+    {% blocktrans asvar shared_subject %}Follow a course online with UNESCO{% endblocktrans %}
+    {% blocktrans with title=page_title|safe url=full_page_url asvar shared_sentence %}I just enrolled to the course "{{ title }}" on UNESCO: {{ url }}{% endblocktrans %}
+
+    <!-- New twitter icon -->
+    <svg
+        style="position: absolute; width: 0; height: 0;"
+        width="0"
+        height="0"
+        version="1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        >
+        <defs>
+            <symbol id="icon-twitter-x" viewBox="0 0 72 72">
+                <path d="M42.5,31.2L66,6h-6L39.8,27.6L24,6H4l24.6,33.6L4,66
+                    h6l21.3-22.8L48,66h20L42.5,31.2z M12.9,10h8l38.1,52h-8L12.9,10z">
+            </symbol>
+        </defs>
+    </svg>
+
     <div class="social-network-badges">
         <a
             href="https://www.facebook.com/share.php?u={{ full_page_url }}"
@@ -20,7 +38,7 @@
             title="{% trans "Share on Twitter" %}"
         >
             <svg role="img">
-                <use xlink:href="#icon-twitter" />
+                <use xlink:href="#icon-twitter-x" />
             </svg>
         </a>
         <a

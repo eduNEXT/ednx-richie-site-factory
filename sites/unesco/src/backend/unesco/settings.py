@@ -552,11 +552,11 @@ class Base(StyleguideMixin, DRFMixin, RichieCoursesConfigurationMixin, Configura
     }
 
     # Web Analytics
-    WEB_ANALYTICS = values.DictValue(
-        None,
-        environ_name="WEB_ANALYTICS",
-        environ_prefix=None,
-    )
+    WEB_ANALYTICS = {
+        'google_tag_manager': {
+            'tracking_id': 'GTM-5J9Z7S7L',
+        }
+    }
 
     # Demo
     RICHIE_DEMO_SITE_DOMAIN = values.Value(

@@ -794,11 +794,11 @@ class Production(Base):
     }
 
     AWS_S3_SIGNATURE_VERSION = values.Value("s3v4")
-    AWS_S3_ENDPOINT_URL = values.Value("https://files.unesco-stage.atlas.edunext.link")
+    AWS_S3_ENDPOINT_URL = values.Value("https://files.globalteachercampus.org")
     AWS_LOCATION = values.Value("richieuploads")
     AWS_STORAGE_BUCKET_NAME = values.Value("openedx-stage")
     AWS_S3_REGION_NAME = values.Value("eu-west-1")
-    AWS_S3_CUSTOM_DOMAIN = values.Value("files.unesco-stage.atlas.edunext.link/openedx-stage")
+    AWS_S3_CUSTOM_DOMAIN = values.Value("files.globalteachercampus.org/openedx-stage")
     AWS_QUERYSTRING_AUTH = False
     AWS_MEDIA_BUCKET_NAME = values.Value("production-richie-media")
 

@@ -21,13 +21,13 @@ msgstr ""
 #, fuzzy, python-format
 #| msgid "Richie news: %(title)s"
 msgid "UNESCO news: %(title)s"
-msgstr "Noticias de Richie: %(title)s"
+msgstr "Noticias de UNESCO: %(title)s"
 
 #: templates/social-networks/blogpost-badges.html:4
 #, fuzzy, python-format
 #| msgid "Richie news: %(title)s %(url)s"
 msgid "UNESCO news: %(title)s %(url)s"
-msgstr "Noticias de Richie: %(title)s %(url)s"
+msgstr "Noticias de UNESCO: %(title)s %(url)s"
 
 #: templates/social-networks/blogpost-badges.html:29
 #: templates/social-networks/course-badges.html:28
@@ -53,13 +53,13 @@ msgstr "Compartir por Email"
 #, fuzzy
 #| msgid "Follow a course online with Richie"
 msgid "Follow a course online with UNESCO"
-msgstr "Sigua un curso en línea con Richie"
+msgstr "Sigua un curso en línea con UNESCO"
 
 #: templates/social-networks/course-badges.html:4
 #, fuzzy, python-format
 #| msgid "I just enrolled to the course \"%(title)s\" on Richie: %(url)s"
 msgid "I just enrolled to the course \"%(title)s\" on UNESCO: %(url)s"
-msgstr "Acabo de inscribirme al curso \"%(title)s\" en Richie: %(url)s"
+msgstr "Acabo de inscribirme al curso \"%(title)s\" en UNESCO: %(url)s"
 
 #: templates/social-networks/footer-badges.html:26
 msgid "Facebook"
@@ -94,7 +94,7 @@ msgstr ""
 
 #: templates/unesco/cookies.html:24
 msgid "Got it!"
-msgstr ""
+msgstr "¡Entendido!"
 
 #: templates/unesco/cookies.html:25
 msgid "Learn more"

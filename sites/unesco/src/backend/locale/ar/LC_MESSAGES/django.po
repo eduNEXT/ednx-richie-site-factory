@@ -87,7 +87,7 @@ msgstr ""
 
 #: templates/unesco/cookies.html:24
 msgid "Got it!"
-msgstr ""
+msgstr "حصلت عليه!"
 
 #: templates/unesco/cookies.html:25
 msgid "Learn more"

@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: richie\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-03-22 16:34+0100\n"
+"POT-Creation-Date: 2024-03-22 20:40+0100\n"
 "PO-Revision-Date: 2023-08-29 09:45\n"
 "Last-Translator: \n"
 "Language-Team: Spanish\n"
@@ -99,10 +99,6 @@ msgstr "¡Entendido!"
 #: templates/unesco/cookies.html:25
 msgid "Learn more"
 msgstr "Saber más"
-
-#: templates/unesco/cookies.html:26
-msgid "privacy-policy-url"
-msgstr ""
 
 #: unesco/settings.py:221
 msgid "Dashboard"

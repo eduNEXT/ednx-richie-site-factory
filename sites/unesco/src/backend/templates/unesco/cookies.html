@@ -1,0 +1,42 @@
+{% load i18n static %}
+<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.css" />
+<script src="//cdnjs.cloudflare.com/ajax/libs/cookieconsent2/3.0.1/cookieconsent.min.js"></script>
+
+<script>
+window.addEventListener("load", function(){
+  let domainFirstDot = window.location.hostname.indexOf(".");
+  // cookie domain stats with a domain for shared whildcard domains
+  let cookiedomain = domainFirstDot > 0 ?  window.location.hostname.substring(domainFirstDot) : window.location.hostname;
+  window.cookieconsent.initialise(
+    {
+      container: document.getElementById("cookie-information"),
+      {% verbatim %}
+      window: '<div role="dialog" id="cookiepopup" aria-label="cookieconsent" class="cc-window {{classes}}"><!--googleoff: all-->{{children}}<!--googleon: all--></div>',
+      {% endverbatim %}
+
+      palette:{
+        popup: {background: "#eee", text: "#000"},
+        button: {background: "#074CE1", text: "#ffffff"},
+        highlight: {background: "#074CE1", border: '#f8e71c', text: "blue"},
+      },
+      "content": {
+        "message": "{% trans "This website uses cookies to ensure you get the best experience on our website. If you continue browsing this site, we understand that you accept the use of cookies." %}",
+        "dismiss": "{% trans "Got it!" %}",
+        "link": "{% trans "Learn more" %}",
+        "href": "https://www.cookielawinfo.com/cookie-consent/",
+      },
+      theme: "classic",
+      elements: {
+        {% verbatim %}
+        "dismiss": '<a aria-label="dismiss cookie message" id="dismiss" role=button class="cc-btn cc-dismiss:focus" href="javascript:void(0);">{{dismiss}}</a>',
+        {% endverbatim %}
+      },
+      position: "top",
+      static: "true",
+      cookie: {
+        domain: "globalteachercampus.org"
+      }
+    }
+  );
+});
+</script>

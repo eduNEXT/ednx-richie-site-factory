@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: richie\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-09-21 20:09+0200\n"
+"POT-Creation-Date: 2024-03-22 20:40+0100\n"
 "PO-Revision-Date: 2023-08-29 09:45\n"
 "Last-Translator: \n"
 "Language-Team: French\n"
@@ -20,67 +20,85 @@ msgstr ""
 #: templates/social-networks/blogpost-badges.html:3
 #, fuzzy, python-format
 #| msgid "Richie news: %(title)s"
-msgid "FUN news: %(title)s"
-msgstr "Actualités Richie: %(title)s"
+msgid "UNESCO news: %(title)s"
+msgstr "Actualités UNESCO: %(title)s"
 
 #: templates/social-networks/blogpost-badges.html:4
 #, fuzzy, python-format
 #| msgid "Richie news: %(title)s %(url)s"
-msgid "FUN news: %(title)s %(url)s"
-msgstr "Actualités Richie: %(title)s %(url)s"
+msgid "UNESCO news: %(title)s %(url)s"
+msgstr "Actualités UNESCO: %(title)s %(url)s"
 
-#: templates/social-networks/blogpost-badges.html:10
-#: templates/social-networks/course-badges.html:10
+#: templates/social-networks/blogpost-badges.html:29
+#: templates/social-networks/course-badges.html:28
 msgid "Share on Facebook"
 msgstr "Partager sur Facebook"
 
-#: templates/social-networks/blogpost-badges.html:20
-#: templates/social-networks/course-badges.html:20
+#: templates/social-networks/blogpost-badges.html:39
+#: templates/social-networks/course-badges.html:38
 msgid "Share on Twitter"
 msgstr "Partager sur Twitter"
 
-#: templates/social-networks/blogpost-badges.html:30
-#: templates/social-networks/course-badges.html:30
+#: templates/social-networks/blogpost-badges.html:49
+#: templates/social-networks/course-badges.html:48
 msgid "Share on Linkedin"
 msgstr "Partager sur Linkedin"
 
-#: templates/social-networks/blogpost-badges.html:40
-#: templates/social-networks/course-badges.html:40
+#: templates/social-networks/blogpost-badges.html:59
+#: templates/social-networks/course-badges.html:58
 msgid "Share by Email"
 msgstr "Partager par Email"
 
 #: templates/social-networks/course-badges.html:3
 #, fuzzy
 #| msgid "Follow a course online with Richie"
-msgid "Follow a course online with FUN"
-msgstr "Suivre un cours en ligne avec Richie"
+msgid "Follow a course online with UNESCO"
+msgstr "Suivre un cours en ligne avec UNESCO"
 
 #: templates/social-networks/course-badges.html:4
 #, fuzzy, python-format
 #| msgid "I just enrolled to the course \"%(title)s\" on Richie: %(url)s"
-msgid "I just enrolled to the course \"%(title)s\" on FUN: %(url)s"
-msgstr "Je viens de m'inscrire au cours \"%(title)s\" sur Richie: %(url)s"
+msgid "I just enrolled to the course \"%(title)s\" on UNESCO: %(url)s"
+msgstr "Je viens de m'inscrire au cours \"%(title)s\" sur UNESCO: %(url)s"
 
-#: templates/social-networks/footer-badges.html:8
+#: templates/social-networks/footer-badges.html:26
 msgid "Facebook"
 msgstr "Facebook"
 
-#: templates/social-networks/footer-badges.html:16
+#: templates/social-networks/footer-badges.html:34
 msgid "Twitter page"
 msgstr "Page Twitter"
 
-#: templates/social-networks/footer-badges.html:19
+#: templates/social-networks/footer-badges.html:37
 #, fuzzy
 #| msgid "Twitter page"
 msgid "Twitter"
 msgstr "Page Twitter"
 
-#: templates/social-networks/footer-badges.html:27
-#: templates/social-networks/footer-badges.html:30
+#: templates/social-networks/footer-badges.html:45
+#: templates/social-networks/footer-badges.html:48
 #, fuzzy
 #| msgid "Linkedin page"
 msgid "Linkedin"
 msgstr "Page LinkedIn"
+
+#: templates/unesco/cookies.html:23
+msgid ""
+"This website uses cookies to ensure you get the best experience on our "
+"website. If you continue browsing this site, we understand that you accept "
+"the use of cookies."
+msgstr ""
+"Ce site web utilise des cookies pour vous offrir la meilleure expérience sur "
+"notre site web. Si vous continuez à naviguer sur ce site, nous comprenons "
+"que vous acceptez l'utilisation de cookies."
+
+#: templates/unesco/cookies.html:24
+msgid "Got it!"
+msgstr "J'ai compris !"
+
+#: templates/unesco/cookies.html:25
+msgid "Learn more"
+msgstr "En savoir plus"
 
 #: unesco/settings.py:221
 #, fuzzy
@@ -231,9 +249,6 @@ msgstr "Nous contacter"
 
 msgid "Life-changing learning!"
 msgstr "Apprendre pour changer de vie !"
-
-msgid "Learn more"
-msgstr "En savoir plus"
 
 msgid "Powered by"
 msgstr "Propulsé par"

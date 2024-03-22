@@ -51,6 +51,7 @@
 @import 'richie-education/scss/components/index';
 
 // Page component overrides
+@import './components/header';
 @import './components/subheader';
 @import './components/templates/courses/cms/homepage';
 @import './components/templates/courses/cms/course_detail';

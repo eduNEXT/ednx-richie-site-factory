@@ -1,0 +1,15 @@
+{% extends "richie/base.html" %}
+
+{% block body_header %}
+	<div id="cookie-information"></div>
+	{{ block.super }}
+
+	{% comment %}Disable header CONTACT button{% endcomment %}
+	{% block topbar_contact %}{% endblock topbar_contact %}
+{% endblock body_header %}
+
+
+{% block body_js %}
+	{{ block.super }}
+	{% include "unesco/cookies.html" %}
+{% endblock body_js %}
